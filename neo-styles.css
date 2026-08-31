@@ -1,0 +1,74 @@
+/* =========================================================
+   NEO-STYLES
+   Decorative layer only. Layout lives in styles.css.
+   ========================================================= */
+
+.neo-shadow {
+  box-shadow: 7px 7px 0 #111;
+}
+
+.magnetic {
+  will-change: transform;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 4px dashed var(--coral);
+  outline-offset: 5px;
+}
+
+.project-card,
+.contact-card,
+.skill-panel,
+.mini-skill,
+.neo-button,
+.nav-cta,
+.theme-toggle,
+.icon-button {
+  cursor: pointer;
+}
+
+body.dark .project-card,
+body.dark .contact-card,
+body.dark .panel-lavender,
+body.dark .panel-cyan,
+body.dark .panel-mint,
+body.dark .panel-coral,
+body.dark .pirate-card {
+  color: #111;
+}
+
+body.dark .project-card *,
+body.dark .contact-card *,
+body.dark .panel-lavender *,
+body.dark .panel-cyan *,
+body.dark .panel-mint *,
+body.dark .panel-coral *,
+body.dark .pirate-card * {
+  color: #111;
+}
+
+body.dark .project-link,
+body.dark .browser-icon,
+body.dark .dark-button {
+  color: #111;
+}
+
+body.dark .dark-button {
+  background: #111;
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .magnetic {
+    will-change: auto;
+  }
+}
+
+/* Brand-correct LinkedIn mark */
+.icon-button.linkedin-home svg rect,
+.linkedin-icon svg rect { fill: currentColor !important; }
+.icon-button.linkedin-home svg circle,
+.icon-button.linkedin-home svg path,
+.linkedin-icon svg circle,
+.linkedin-icon svg path { fill: #fff !important; }

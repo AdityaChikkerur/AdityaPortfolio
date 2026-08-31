@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aditya Chikkerur — Software Developer & Data Science Student">
+  <title>Aditya Chikkerur — Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="neo-styles.css">
+</head>
+
+<body>
+  <!-- ================= OPENING VOYAGE ================= -->
+  <div class="intro-screen" id="introScreen" aria-hidden="true">
+    <div class="intro-sky">
+      <div class="intro-sun"></div>
+      <div class="intro-cloud cloud-one"></div>
+      <div class="intro-cloud cloud-two"></div>
+      <div class="intro-copy">
+        <span>ADITYA CHIKKERUR</span>
+        <strong>SETTING SAIL<br>TO BUILD.</strong>
+        <small>SOFTWARE · DATA · AI</small>
+      </div>
+
+      <div class="intro-shore">
+        <div class="intro-wave wave-one"></div>
+        <div class="intro-wave wave-two"></div>
+        <div class="intro-sand"></div>
+      </div>
+
+      <div class="intro-ship" aria-hidden="true">
+        <svg viewBox="0 0 560 310" role="presentation">
+          <path class="ship-sail ship-sail-back" d="M306 38h132c-28 48-72 76-132 91V38Z"></path>
+          <path class="ship-sail ship-sail-front" d="M292 55h-102c18 43 51 67 102 75V55Z"></path>
+          <path class="ship-mast" d="M289 25V185"></path>
+          <path class="ship-yard" d="M278 47h171"></path>
+          <path class="ship-hull" d="M92 178h366c-30 61-84 91-174 91H185c-43-8-72-34-93-91Z"></path>
+          <path class="ship-deck" d="M109 178h348"></path>
+          <path class="ship-cabin" d="M350 140h73v38h-73z"></path>
+          <path class="ship-window" d="M365 151h13v12h-13zM395 151h13v12h-13z"></path>
+          <path class="ship-flag" d="M287 25c30 0 47 9 62 23-23 5-42 3-62-5V25Z"></path>
+          <path class="ship-rope" d="M289 25 190 130M450 47 414 140"></path>
+          <circle class="ship-wheel" cx="151" cy="166" r="23"></circle>
+          <path class="ship-wheel-spoke" d="M151 143v46M128 166h46M135 150l32 32M167 150l-32 32"></path>
+        </svg>
+      </div>
+
+      <div class="intro-splash splash-one"></div>
+      <div class="intro-splash splash-two"></div>
+      <div class="intro-stamp">AHOY!<br>NEXT BUILD</div>
+      <div class="intro-bottom">SCROLL TO EXPLORE <span>↓</span></div>
+    </div>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Aditya Chikkerur home">
+        <span class="brand-box">AC</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a class="nav-cta" href="#contact">Get in Touch!</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">☾</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HOME ================= -->
+    <section class="section hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <p class="eyebrow cyan-text">Hi there! 👋</p>
+
+          <h1 class="hero-animated-title">
+            <span id="nameTyping"></span><br>
+            <span class="highlight lavender-highlight"><span id="surnameTyping"></span></span>
+          </h1>
+
+          <p class="hero-description">
+            I’m a final-year Computer Science and Engineering student specializing in
+            Data Science. I enjoy turning ideas into practical software products,
+            full-stack applications and AI/ML systems that solve real problems.
+          </p>
+
+          <div class="hero-socials" aria-label="Social links">
+            <a class="icon-button magnetic" href="https://github.com/AdityaChikkerur"
+               target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 .7a11.3 11.3 0 0 0-3.58 22.02c.57.1.78-.25.78-.55v-2.15c-3.18.69-3.85-1.34-3.85-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.54-.29-5.21-1.27-5.21-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.13 1.17a10.86 10.86 0 0 1 5.7 0c2.17-1.48 3.13-1.17 3.13-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.82 1.18 3.07 0 4.39-2.68 5.35-5.23 5.63.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"/>
+              </svg>
+            </a>
+
+            <a class="icon-button magnetic linkedin-home" href="https://www.linkedin.com/in/aditya-chikkerur-a70754298/"
+               target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="3" fill="currentColor"></rect>
+                <circle cx="7.2" cy="8" r="1.25" fill="#fff"></circle>
+                <rect x="6" y="10.2" width="2.4" height="7.8" fill="#fff"></rect>
+                <path d="M11 10.2h2.35v1.1h.04c.68-.98 1.66-1.45 2.87-1.45 2.43 0 3.74 1.59 3.74 4.18V18h-2.5v-3.52c0-1.39-.03-2.67-1.63-2.67-1.63 0-1.88 1.52-1.88 2.58V18H11z" fill="#fff"></path>
+              </svg>
+            </a>
+          </div>
+
+          <a href="#contact" class="neo-button cyan-button magnetic">
+            Get in Touch! <span>↗</span>
+          </a>
+        </div>
+
+        <div class="hero-art developer-scene">
+          <div class="photo-frame neo-shadow">
+            <div class="photo-tape"></div>
+            <img src="image/aditya-avatar.jpg" alt="Aditya Chikkerur" class="hero-avatar">
+            <div class="photo-caption">DATA SCIENCE &amp; ML</div>
+          </div>
+
+          <div class="floating-code code-one">&lt;/&gt;</div>
+          <div class="floating-code code-two">&gt;_</div>
+          <div class="floating-code code-three">AI</div>
+
+          <div class="photo-note">
+            <span>BUILD</span>
+            <span>LEARN</span>
+            <span>SHIP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container home-skills" aria-label="Core skills">
+        <div class="mini-skill mint-skill">Python</div>
+        <div class="mini-skill lavender-skill">TypeScript</div>
+        <div class="mini-skill cyan-skill">React / Next.js</div>
+        <div class="mini-skill mint-skill">Machine Learning</div>
+        <div class="mini-skill peach-skill">PostgreSQL / Supabase</div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section about-section" id="about">
+      <div class="container about-layout">
+        <div class="about-intro">
+          <p class="section-number">01 / ABOUT</p>
+          <h2>
+            Curious by<br>
+            <span class="highlight cyan-highlight">default.</span>
+          </h2>
+          <p class="about-kicker">
+            I enjoy taking a problem apart, understanding the moving pieces and turning the useful parts into something people can actually use.
+          </p>
+        </div>
+
+        <div class="about-card neo-card">
+          <div class="about-card-top">
+            <span>ADITYA / PROFILE</span>
+            <span>BUILD · LEARN · SHIP</span>
+          </div>
+
+          <div class="about-lead">
+            <p>
+              I’m a final-year B.E. Computer Science and Engineering student specializing in
+              <strong>Data Science</strong>. I’m interested in the space where software,
+              data and machine learning meet real products.
+            </p>
+          </div>
+
+          <div class="about-copy-grid">
+            <div>
+              <span class="about-label">WHAT I LIKE</span>
+              <p>
+                Building interfaces, connecting databases, experimenting with ML and finding simple ways to turn complex ideas into usable flows.
+              </p>
+            </div>
+            <div>
+              <span class="about-label">HOW I WORK</span>
+              <p>
+                Start with the problem, build a small version, test what works and keep improving until the product feels right.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-principles">
+            <div class="about-principle cyan-panel">
+              <span>01</span>
+              <strong>BUILD</strong>
+              <small>Make ideas tangible.</small>
+            </div>
+            <div class="about-principle lavender-panel">
+              <span>02</span>
+              <strong>LEARN</strong>
+              <small>Learn by doing.</small>
+            </div>
+            <div class="about-principle coral-panel">
+              <span>03</span>
+              <strong>SHIP</strong>
+              <small>Finish what I start.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="projects-heading">
+          <div>
+            <p class="section-number">02 / PROJECTS</p>
+            <h2>Things I’ve <span class="highlight lavender-highlight">built.</span></h2>
+          </div>
+          <p>
+            Products, platforms and AI systems — each one built around a different problem.
+          </p>
+        </div>
+
+        <div class="project-grid">
+
+          <article class="project-card yellow-card">
+            <div class="project-top">
+              <span class="project-number">01</span>
+              <span class="browser-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M3 12h18"></path>
+                  <path d="M12 3c2.4 2.5 3.5 5.5 3.5 9s-1.1 6.5-3.5 9"></path>
+                  <path d="M12 3c-2.4 2.5-3.5 5.5-3.5 9s1.1 6.5 3.5 9"></path>
+                </svg>
+              </span>
+            </div>
+            <span class="project-type">PRODUCT · RESTAURANT</span>
+            <h3>PotBhar</h3>
+            <p>Restaurant POS and table/order management platform designed to simplify restaurant operations.</p>
+            <a class="project-link" href="https://www.potbharpos.in/" target="_blank" rel="noopener noreferrer">
+              Visit Project <span>↗</span>
+            </a>
+          </article>
+
+          <article class="project-card cyan-card">
+            <div class="project-top">
+              <span class="project-number">02</span>
+              <span class="browser-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M3 12h18"></path>
+                  <path d="M12 3c2.4 2.5 3.5 5.5 3.5 9s-1.1 6.5-3.5 9"></path>
+                  <path d="M12 3c-2.4 2.5-3.5 5.5-3.5 9s-1.1 6.5-3.5 9"></path>
+                </svg>
+              </span>
+            </div>
+            <span class="project-type">PRODUCT · SPORTS</span>
+            <h3>PickleBuzz</h3>
+            <p>Tournament management platform for pickleball competitions, events and players.</p>
+            <a class="project-link" href="https://www.picklebuzz.in/" target="_blank" rel="noopener noreferrer">
+              Visit Project <span>↗</span>
+            </a>
+          </article>
+
+          <article class="project-card pink-card">
+            <div class="project-top">
+              <span class="project-number">03</span>
+              <span class="browser-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M3 12h18"></path>
+                  <path d="M12 3c2.4 2.5 3.5 5.5 3.5 9s-1.1 6.5-3.5 9"></path>
+                  <path d="M12 3c-2.4 2.5-3.5 5.5-3.5 9s-1.1 6.5-3.5 9"></path>
+                </svg>
+              </span>
+            </div>
+            <span class="project-type">PRODUCT · CRICKET</span>
+            <h3>CricketAuctionPro</h3>
+            <p>Live cricket auction management and team-building platform with an interactive auction workflow.</p>
+            <a class="project-link" href="https://www.cricketauctionpro.in/" target="_blank" rel="noopener noreferrer">
+              Visit Project <span>↗</span>
+            </a>
+          </article>
+
+          <article class="project-card lavender-card">
+            <div class="project-top">
+              <span class="project-number">04</span>
+              <span class="browser-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M3 12h18"></path>
+                  <path d="M12 3c2.4 2.5 3.5 5.5 3.5 9s-1.1 6.5-3.5 9"></path>
+                  <path d="M12 3c-2.4 2.5-3.5 5.5-3.5 9s-1.1 6.5-3.5 9"></path>
+                </svg>
+              </span>
+            </div>
+            <span class="project-type">AI · DEVELOPER TOOL</span>
+            <h3>Updrift</h3>
+            <p>AI reliability engineer for third-party API drift detection, repository impact mapping and migration.</p>
+            <a class="project-link" href="https://www.updrift.dev/" target="_blank" rel="noopener noreferrer">
+              Visit Project <span>↗</span>
+            </a>
+          </article>
+
+          <article class="project-card mint-card">
+            <div class="project-top">
+              <span class="project-number">05</span>
+              <span class="browser-icon ai-browser" aria-hidden="true">AI</span>
+            </div>
+            <span class="project-type">AI · COMPUTER VISION</span>
+            <h3>AI Proctoring Platform</h3>
+            <p>AI-based online examination platform focused on intelligent monitoring and automated proctoring workflows.</p>
+            <span class="project-link coming-soon">Project <span>Coming Soon</span></span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="skills-heading">
+          <div>
+            <p class="section-number">03 / SKILLS</p>
+            <h2>Tools I use<br>to <span class="highlight cyan-highlight">build.</span></h2>
+          </div>
+          <p>
+            A practical toolkit spanning software development, data science,
+            AI and product engineering.
+          </p>
+        </div>
+
+        <div class="skills-board">
+          <div class="skill-panel panel-lavender">
+            <div class="skill-panel-head"><span>01</span><h3>Languages</h3></div>
+            <div class="skill-pills">
+              <span>Python</span><span>TypeScript</span><span>JavaScript</span><span>SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-panel panel-cyan">
+            <div class="skill-panel-head"><span>02</span><h3>Web &amp; Frameworks</h3></div>
+            <div class="skill-pills">
+              <span>React</span><span>Next.js</span><span>Electron</span><span>Tailwind CSS</span><span>Node.js</span>
+            </div>
+          </div>
+
+          <div class="skill-panel panel-mint">
+            <div class="skill-panel-head"><span>03</span><h3>AI / ML &amp; Data</h3></div>
+            <div class="skill-pills">
+              <span>Machine Learning</span><span>Computer Vision</span><span>PyTorch</span><span>Scikit-learn</span><span>NumPy</span><span>Pandas</span><span>SciPy</span><span>OpenCV</span>
+            </div>
+          </div>
+
+          <div class="skill-panel panel-white">
+            <div class="skill-panel-head"><span>04</span><h3>Databases &amp; Cloud</h3></div>
+            <div class="skill-pills">
+              <span>PostgreSQL</span><span>Supabase</span><span>MongoDB</span><span>Prisma ORM</span><span>IndexedDB / Dexie</span>
+            </div>
+          </div>
+
+          <div class="skill-panel panel-coral">
+            <div class="skill-panel-head"><span>05</span><h3>Tools &amp; Platforms</h3></div>
+            <div class="skill-pills">
+              <span>Git / GitHub</span><span>Vercel</span><span>Power BI</span><span>Tableau</span>
+            </div>
+          </div>
+
+          <div class="skill-panel panel-white">
+            <div class="skill-panel-head"><span>06</span><h3>Core CS</h3></div>
+            <div class="skill-pills">
+              <span>DSA</span><span>OOP</span><span>DBMS</span><span>Operating Systems</span><span>Computer Networks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="languages-strip neo-card">
+          <strong>Languages spoken</strong>
+          <span>English</span>
+          <span>Hindi</span>
+          <span>Marathi</span>
+          <span>Kannada</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <p class="section-number">04 / CONTACT</p>
+
+        <div class="contact-heading">
+          <h2>Have an idea?<br><span>Let’s build it.</span></h2>
+
+          <a class="email-main neo-shadow" href="mailto:adityachikkerur@gmail.com">
+            adityachikkerur@gmail.com <span>↗</span>
+          </a>
+        </div>
+
+        <p class="contact-subtitle">Let’s build something amazing together.</p>
+
+        <div class="contact-cards">
+
+          <a class="contact-card linkedin-card" href="https://www.linkedin.com/in/aditya-chikkerur-a70754298/"
+             target="_blank" rel="noopener noreferrer">
+            <div class="contact-icon linkedin-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="3" fill="currentColor"></rect>
+                <circle cx="7.2" cy="8" r="1.25" fill="#fff"></circle>
+                <rect x="6" y="10.2" width="2.4" height="7.8" fill="#fff"></rect>
+                <path d="M11 10.2h2.35v1.1h.04c.68-.98 1.66-1.45 2.87-1.45 2.43 0 3.74 1.59 3.74 4.18V18h-2.5v-3.52c0-1.39-.03-2.67-1.63-2.67-1.63 0-1.88 1.52-1.88 2.58V18H11z" fill="#fff"></path>
+              </svg>
+            </div>
+            <small>CONNECT</small>
+            <strong>LinkedIn</strong>
+            <span class="card-arrow">↗</span>
+          </a>
+
+          <a class="contact-card github-card" href="https://github.com/AdityaChikkerur"
+             target="_blank" rel="noopener noreferrer">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 .7a11.3 11.3 0 0 0-3.58 22.02c.57.1.78-.25.78-.55v-2.15c-3.18.69-3.85-1.34-3.85-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.54-.29-5.21-1.27-5.21-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.13 1.17a10.86 10.86 0 0 1 5.7 0c2.17-1.48 3.13-1.17 3.13-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.82 1.18 3.07 0 4.39-2.68 5.35-5.23 5.63.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"/>
+              </svg>
+            </div>
+            <small>CODE</small>
+            <strong>GitHub</strong>
+            <span class="card-arrow">↗</span>
+          </a>
+
+          <a class="contact-card email-card" href="mailto:adityachikkerur@gmail.com">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+              </svg>
+            </div>
+            <small>REACH OUT</small>
+            <strong>Email</strong>
+            <span class="card-arrow">↗</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+    <!-- ================= FLOATING PIRATE ================= -->
+    <div class="site-pirate" aria-hidden="true">
+      <div class="site-pirate-rope"></div>
+      <div class="site-pirate-pin"></div>
+      <div class="site-pirate-note">AHOY!<br>NEXT<br>BUILD</div>
+      <img src="image/pirat.png" alt="" loading="lazy">
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <strong>ADITYA CHIKKERUR</strong>
+        <span>Software Developer &amp; Data Science Student</span>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="footer-email" href="mailto:adityachikkerur@gmail.com">
+        adityachikkerur@gmail.com
+      </a>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 Aditya Chikkerur</span>
+      <span>Built with curiosity &amp; code.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
